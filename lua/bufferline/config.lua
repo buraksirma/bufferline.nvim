@@ -47,6 +47,7 @@ local fmt = string.format
 ---@field public diagnostics_update_in_insert boolean
 ---@field public offsets table[]
 ---@field public groups GroupOpts
+---@field public themable boolean
 
 ---@class BufferlineHLGroup
 ---@field guifg string
@@ -538,6 +539,7 @@ local function get_defaults()
   return {
     ---@type BufferlineOptions
     options = {
+      themable = true, -- whether or not bufferline highlights can be overriden externally
       view = "default",
       numbers = "none",
       number_style = "superscript",
